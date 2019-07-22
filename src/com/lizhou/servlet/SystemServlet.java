@@ -62,7 +62,6 @@ public class SystemServlet extends HttpServlet {
     }
 
     private void editSystemInfo(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        request.setCharacterEncoding("UTF-8");
         String name = request.getParameter("name");
         String value = request.getParameter("value");
 
@@ -74,7 +73,6 @@ public class SystemServlet extends HttpServlet {
     }
 
     private void editPasswod(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        request.setCharacterEncoding("UTF-8");
         User user = new User();
         user.setAccount(request.getParameter("account"));
         user.setPassword(request.getParameter("password"));
@@ -91,7 +89,6 @@ public class SystemServlet extends HttpServlet {
      * @throws ServletException
      */
     private void loginOut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
         //退出系统时清除系统登录的用户
         request.getSession().removeAttribute("user");
         String contextPath = request.getContextPath();
@@ -100,7 +97,6 @@ public class SystemServlet extends HttpServlet {
     }
 
     private void allAccount(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        request.setCharacterEncoding("UTF-8");
         String result = service.getAccountList();
         //返回数据
         response.getWriter().write(result);
