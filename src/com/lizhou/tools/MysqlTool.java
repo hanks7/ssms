@@ -15,6 +15,9 @@ public class MysqlTool {
 	private static ThreadLocal<Connection> tl = new ThreadLocal<Connection>();
 	
 	static {
+        //参数对应使用哪个config，如果不写，表示使用默认的config，即default-config里的配置，否则使用参数指定的named-config里的配置。
+        //具体参考文章:https://blog.csdn.net/chenpuzhen/article/details/80610044
+        //我个人非常讨厌这种写法.
 		dataSource = new ComboPooledDataSource();
 	}
 	
