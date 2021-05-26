@@ -590,7 +590,7 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'admin', '111111', '管理员', '1');
+INSERT INTO `user` VALUES ('1', 'admin', '123', '管理员', '1');
 INSERT INTO `user` VALUES ('2', '2001', '111111', '卡卡西', '3');
 INSERT INTO `user` VALUES ('3', '2002', '111111', '卡普', '3');
 INSERT INTO `user` VALUES ('4', '2003', '111111', '战国', '3');
